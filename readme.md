@@ -5,6 +5,7 @@ This repository contains a simple scenario built to demonstrate how ASP.NET Core
 * Catalog API - this is an ASP.NET minimal API project with one endpoint. 
 * Orders API - this is an ASP.NET minimal API project with one endpoint. 
 * UI - an ASP.NET Blazor Server app that calls out to both the Catalog and Orders API and renders their status.
+* ```tye.yaml```  - this file defines microservices that can be run easily on local development machine using `tye run` command
 * ```deploy``` folder - this folder contains a series of [Azure Bicep](http://aka.ms/bicep) templates that can be used to create the application and deploy it.
 * ```setup.ps1``` - this file is a one-stop way for you to deploy the app to your own Azure subscription so you can try the scenario. 
 
@@ -15,13 +16,17 @@ This repository contains a simple scenario built to demonstrate how ASP.NET Core
 * An Azure subscription
 * Docker
 * PowerShell *(GitHub Actions will replace this prerequisite soon)*
+* [Dapr](https://docs.dapr.io/getting-started/install-dapr-cli/)
+* [Tye](https://github.com/dotnet/tye/blob/main/docs/getting_started.md) (optional, recommended)
 
 ## Setup
 
 1. Clone this repository.
-2. Sign in to your Azure subscription using the `az login` command.
-3. If you have more than 1 Azure subscription, make sure you're targeting the *right* Azure subscription by using the `az account show` and `az account set -s <subscription-id>` commands.
-4. From the root of this repository, run `./setup.ps1`. 
+2. From root of this repo, run on local machine with `tye run`.  Test url is http://localhost:5213.  Tye dasbboard is http://localhost:8000.  
+3. View Zipkin observability and tracing on http://localhost:9411 
+4. Sign in to your Azure subscription using the `az login` command.
+5. If you have more than 1 Azure subscription, make sure you're targeting the *right* Azure subscription by using the `az account show` and `az account set -s <subscription-id>` commands.
+6. From the root of this repo, run `./setup.ps1`. 
 
 ## Topology diagram
 
