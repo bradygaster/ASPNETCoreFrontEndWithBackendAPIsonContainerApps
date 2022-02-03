@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.31916.450
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetOnContainerApps.APIs.Catalog", "DotNetOnContainerApps.APIs.Catalog\DotNetOnContainerApps.APIs.Catalog.csproj", "{D4D4061E-B79A-484D-B4AF-1359A6104B56}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CatalogAPI", "DotNetOnContainerApps.APIs.Catalog\CatalogAPI.csproj", "{D4D4061E-B79A-484D-B4AF-1359A6104B56}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetOnContainerApps.APIs.Orders", "DotNetOnContainerApps.APIs.Orders\DotNetOnContainerApps.APIs.Orders.csproj", "{72737BD2-14C3-440A-9AFC-A71D82FEDD1C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrdersAPI", "DotNetOnContainerApps.APIs.Orders\OrdersAPI.csproj", "{72737BD2-14C3-440A-9AFC-A71D82FEDD1C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Setup", "Setup", "{51FC477D-0930-4C6E-AFF2-2F7E8ADA5AAA}"
 	ProjectSection(SolutionItems) = preProject
@@ -14,7 +14,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Setup", "Setup", "{51FC477D
 		setup.ps1 = setup.ps1
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetOnContainerApps.FrontEnd", "DotNetOnContainerApps.FrontEnd\DotNetOnContainerApps.FrontEnd.csproj", "{F266FFE5-AC11-475D-BFDA-879EE49D596E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FrontEnd", "DotNetOnContainerApps.FrontEnd\FrontEnd.csproj", "{F266FFE5-AC11-475D-BFDA-879EE49D596E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

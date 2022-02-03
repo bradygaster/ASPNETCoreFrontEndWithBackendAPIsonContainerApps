@@ -6,16 +6,16 @@ EXPOSE 80
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["DotNetOnContainerApps.APIs.Catalog/DotNetOnContainerApps.APIs.Catalog.csproj", "DotNetOnContainerApps.APIs.Catalog/"]
-RUN dotnet restore "DotNetOnContainerApps.APIs.Catalog/DotNetOnContainerApps.APIs.Catalog.csproj"
+COPY ["DotNetOnContainerApps.APIs.Catalog/CatalogAPI.csproj", "DotNetOnContainerApps.APIs.Catalog/"]
+RUN dotnet restore "DotNetOnContainerApps.APIs.Catalog/CatalogAPI.csproj"
 COPY . .
 WORKDIR "/src/DotNetOnContainerApps.APIs.Catalog"
-RUN dotnet build "DotNetOnContainerApps.APIs.Catalog.csproj" -c Release -o /app/build
+RUN dotnet build "CatalogAPI.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "DotNetOnContainerApps.APIs.Catalog.csproj" -c Release -o /app/publish
+RUN dotnet publish "CatalogAPI.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "DotNetOnContainerApps.APIs.Catalog.dll"]
+ENTRYPOINT ["dotnet", "CatalogAPI.dll"]
